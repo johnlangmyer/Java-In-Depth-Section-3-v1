@@ -58,17 +58,17 @@ public class BasicsDemo {
         System.out.println("Project:  " + scores[3]);
         System.out.println("# of Grades: " + scores.length);
 
-        Student[] students = new Student[] {new Student(), new Student(), new Student()};
+//        Student[] students = new Student[] {new Student(), new Student(), new Student()};
 //        students[0] = new Student();
 //        students[1] = new Student();
 //        students[2] = new Student();
-
-        students[0].name = "John";
-        students[1].name = "Raj";
-        students[2].name = "Anita";
-        System.out.println("Student 1: " + students[0].name);
-        System.out.println("Student 2: " + students[1].name);
-        System.out.println("Student 3: " + students[2].name);
+//
+//        students[0].name = "John";
+//        students[1].name = "Raj";
+//        students[2].name = "Anita";
+//        System.out.println("Student 1: " + students[0].name);
+//        System.out.println("Student 2: " + students[1].name);
+//        System.out.println("Student 3: " + students[2].name);
 
 
 
@@ -91,17 +91,36 @@ public class BasicsDemo {
         return false;
     }
 
+    static void go(int[] array){
+        System.out.println("Array[0]: " + array[0]);
+        System.out.println("Array[1]: " + array[1]);
+        array[1] = 22;
+    }
+    static void go(int i){
+        System.out.println("go (int i)");
+
+    }
+    static void go(short s){
+        System.out.println("go (short s)");
+    }
+    static void varargsOverload(boolean b, int... list){
+        System.out.println("\nInside varargsOverload...");
+        System.out.println("list.length: " + list.length);
+
+    }
+
+
 
     public static void main (String[] args) {
 
-        // int i = 2;
-        // int j = 3;
-        // System.out.println( i + j );
+//        int i = 2;
+//        int j = 3;
+//        System.out.println( i + j );
 //        primitives();
 //
 //        System.out.println("\nDecimal examinations:");
 //        System.out.println(1-0.7); // floating point binary has trouble
-//        // 0.1 ~ 0.00110011001100110011.....
+//        0.1 ~ 0.00110011001100110011.....
 //
 //        double price = 1000;
 //        double discountPercent = 0.9;
@@ -115,15 +134,25 @@ public class BasicsDemo {
 //        System.out.println(first.add(second)); // Use big decimal from math package - these are objects now, not numbers
 
 //        arrays();
-        float d = (float) sum(3.0f,(float) 2.0);
-        System.out.println(d);
+//        float d = (float) sum(3.0f,(float) 2.0);
+//        System.out.println(d);
+//
+//        double d2 = avg(3.0,2.0);
+//        System.out.println(d2);
+//
+//        int[] list = {1, 2, 3};
+//
+//        System.out.println(search(list, 4));
+//        int[] array = {1,2};
+//        go(array);
+//        System.out.println("Array[1]: " + array[1]);
+//        go(1000);
+//        byte b = 22;
+//        go(b);
+        varargsOverload(true, 1, 2, 3);
+        varargsOverload(true, 1, 2, 3, 4, 5, 6);
+        varargsOverload(true);
 
-        double d2 = avg(3.0,2.0);
-        System.out.println(d2);
-
-        int[] list = {1, 2, 3};
-
-        System.out.println(search(list, 4));
 
 
 
