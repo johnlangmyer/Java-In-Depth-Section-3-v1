@@ -46,6 +46,8 @@ public class Student {
         return true;
     }
 
+//    static Student student3;
+
     public static void main(String[] args){
         Student student1  = new Student();
 
